@@ -1,0 +1,6 @@
+_target_: src.algorithms.ERM
+
+name: erm
+allowable_errors: [1, 3, 5, 10, 30, 50, 100, 200]
+
+groups_count: 2

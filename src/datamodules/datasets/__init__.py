@@ -1,0 +1,4 @@
+from src.datamodules.datasets.wair_d import WAIRDDataset
+from src.datamodules.datasets.wair_d_full_single_link import WAIRDDatasetFullSingleLink
+from src.datamodules.datasets.wair_d_full_all_links import WAIRDDatasetFullAllLinks
+from src.datamodules.datasets.wair_d_images import WAIRDDatasetImages

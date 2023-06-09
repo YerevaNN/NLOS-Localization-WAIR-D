@@ -1,0 +1,4 @@
+aim:
+  _target_: aim.pytorch_lightning.AimLogger
+  repo: ~/projects/wair_d_distal
+  experiment: default

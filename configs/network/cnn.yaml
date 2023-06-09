@@ -1,0 +1,5 @@
+_target_: src.networks.CNN
+
+p: 7
+a: 4
+b: 4

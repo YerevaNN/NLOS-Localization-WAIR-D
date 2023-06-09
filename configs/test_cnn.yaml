@@ -1,0 +1,23 @@
+# @package _global_
+name: test_cnn
+seed: 0
+print_config: True
+ignore_warnings: True
+
+checkpoint_path: ${oc.env:OUTPUT_DIR}/2023-02-16/23-31-23/4/checkpoints/last.ckpt
+
+defaults:
+  - datamodule: wair_d_full_all_links
+  - optimizer: adam
+  - scheduler: null
+  - algorithm: erm
+  - network: cnn
+  - trainer: default
+  - loggers: [ wandb ]
+  - _self_
+
+hydra:
+  run:
+    dir: ${oc.env:OUTPUT_DIR}/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: True

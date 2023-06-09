@@ -1,0 +1,19 @@
+# @package _global_
+name: unet_visualize
+seed: 0
+print_config: True
+ignore_warnings: True
+
+
+checkpoint_path: ${oc.env:OUTPUT_DIR}/2023-03-03_18-53-39/checkpoints/last.ckpt
+defaults:
+  - datamodule: wair_d_images
+  - algorithm: unet_erm
+  - network: unet
+  - _self_
+
+hydra:
+  run:
+    dir: ${oc.env:OUTPUT_DIR}/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: True

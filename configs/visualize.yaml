@@ -1,0 +1,18 @@
+# @package _global_
+name: visualize
+seed: 0
+print_config: True
+ignore_warnings: True
+
+checkpoint_path: ${oc.env:OUTPUT_DIR}/2023-02-16_15-17-43/checkpoints/last.ckpt
+defaults:
+  - datamodule: wair_d
+  - algorithm: erm
+  - network: wair_d_original
+  - _self_
+
+hydra:
+  run:
+    dir: ${oc.env:OUTPUT_DIR}/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: True

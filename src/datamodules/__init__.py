@@ -1,0 +1,4 @@
+from src.datamodules.wair_d import WAIRDDatamodule
+from src.datamodules.wair_d_full_single_link import WAIRDFullSingleLinkDatamodule
+from src.datamodules.wair_d_full_all_links import WAIRDFullAllLinksDatamodule
+from src.datamodules.wair_d_images import WAIRDImagesDatamodule

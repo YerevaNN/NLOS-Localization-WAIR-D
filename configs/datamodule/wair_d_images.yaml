@@ -1,0 +1,11 @@
+_target_: src.datamodules.WAIRDImagesDatamodule
+
+name: wair_d_images
+#data_path: /Users/YerevaNN/Downloads/WAIR-D/data
+data_path: ${oc.env:DATA_PATH}
+scenario: scenario_1
+batch_size: 8
+num_workers: 6
+output_kernel_size: 3
+use_channels: null
+

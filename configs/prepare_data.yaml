@@ -1,0 +1,19 @@
+# @package _global_
+name: prepare_data
+seed: 0
+print_config: True
+ignore_warnings: True
+
+raw_data_dir: ${oc.env:RAW_DATA_DIR}
+prepared_data_dir: ${oc.env:PREPARED_DATA_DIR}
+
+image_size: 224
+
+n_processes: 8
+items_per_step: 100
+
+hydra:
+  run:
+    dir: ${oc.env:OUTPUT_DIR}/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: True

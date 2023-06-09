@@ -1,0 +1,25 @@
+name: wair_d_distal
+channels:
+  - defaults
+  - conda-forge
+  - plotly
+  - anaconda
+dependencies:
+  - pip=22.3.1
+  - python=3.10.9
+  - conda-lock=1.4.0
+  - hydra-core=1.2.0
+  - pytorch-lightning=1.8.1
+  - rich=12.5.1
+  - scikit-image=0.19.2
+  - plotly=5.13.0
+  - aim=3.16.0
+  - pytorch=1.13.1
+  - torchvision=0.14.1
+  - lightning-bolts=0.6.0
+  - pip:
+      - streamlit==1.17.0
+      - wandb==0.13.9
+      - scipy==1.9.3
+      - python-dotenv==1.0.0
+

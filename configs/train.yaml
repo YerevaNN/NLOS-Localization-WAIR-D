@@ -1,0 +1,22 @@
+# @package _global_
+name: train
+seed: 0
+print_config: True
+ignore_warnings: True
+
+defaults:
+  - datamodule: wair_d_images
+  - optimizer: adam
+  - scheduler: null
+  - algorithm: unet_erm
+  - network: unet
+  - trainer: default
+  - callbacks: default
+  - loggers: [aim]
+  - _self_
+
+hydra:
+  run:
+    dir: ${oc.env:OUTPUT_DIR}/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: True

@@ -1,0 +1,4 @@
+_target_:  src.networks.ResNet50
+
+num_classes: 2
+pretrained: False

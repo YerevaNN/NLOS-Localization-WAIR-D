@@ -1,0 +1,8 @@
+_target_: src.datamodules.WAIRDFullSingleLinkDatamodule
+
+name: wair_d_full_single_link
+#data_path: /Users/YerevaNN/Downloads/WAIR-D/data
+data_path: ${oc.env:DATA_PATH}
+scenario: scenario_1
+batch_size: 500
+num_workers: 15

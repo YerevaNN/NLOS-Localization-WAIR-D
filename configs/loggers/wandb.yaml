@@ -1,0 +1,8 @@
+# https://wandb.ai
+
+wandb:
+  _target_: pytorch_lightning.loggers.wandb.WandbLogger
+  project: wair_d
+  entity: your_wandb_entity
+  name: null
+  id: null
